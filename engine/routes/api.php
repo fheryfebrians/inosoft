@@ -23,8 +23,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/login', [AuthController::class, 'login']);
 Route::middleware('auth:api')->group(function() {
-    Route::get('kendaraan/stok', [KendaraanController::class, 'stok']);
+    Route::get('kendaraan/stok', [KendaraanController::class, 'stok'])->name('kendaraan.stok');
     Route::resource('kendaraan', KendaraanController::class);
-    Route::get('penjualan/laporan', [PenjualanController::class, 'laporan']);
+    Route::get('penjualan/laporan', [PenjualanController::class, 'laporan'])->name('penjualan.laporan');
     Route::resource('penjualan', PenjualanController::class);
 });

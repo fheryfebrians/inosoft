@@ -42,7 +42,18 @@ class PenjualanRepository implements PenjualanInterface
 
     public function laporan()
     {
-        $data = $this->model->groupBy('kendaraan_id')->select('jumlah')->get();
+        // $data = $this->model->groupBy('kendaraan_id')
+        // ->selectRaw('*, sum(jumlah) as sum')
+        // ->get();
+
+        $kendaraan = $this->model->get()->groupby('kendaraan_id');
+        $data = $kendaraan->map(function($kendaraan) {
+            return [
+                'kendaraan_id' => $kendaraan->first()['kendaraan_id'],
+                'jumlah' => $kendaraan->sum('jumlah'),
+                'data' => $kendaraan
+            ];
+        });
 
         return $data;
     }

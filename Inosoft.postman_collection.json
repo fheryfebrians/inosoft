@@ -1,0 +1,1607 @@
+{
+	"info": {
+		"_postman_id": "c0fdde7b-f786-4396-ba00-7c2f808993ed",
+		"name": "Inosoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9087435"
+	},
+	"item": [
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "user@email.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{host}/api/login",
+					"host": [
+						"{host}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "LOGIN",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "user@email.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{host}/api/login",
+							"host": [
+								"{host}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 02:47:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.3"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"user\": {\n        \"_id\": \"63f820cb306212b7ea0ff8f2\",\n        \"name\": \"users\",\n        \"email\": \"user@email.com\"\n    },\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3Rlc3QvaW5vc29mdC9hcGkvbG9naW4iLCJpYXQiOjE2NzcyMDY4NDMsImV4cCI6MTY3NzIxMDQ0MywibmJmIjoxNjc3MjA2ODQzLCJqdGkiOiJnczFGbmhwT2dlRVRPSllEIiwic3ViIjoiNjNmODIwY2IzMDYyMTJiN2VhMGZmOGYyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4TYwmKZGIKbgtKZDBzuhqoIjfO4zQ7ARuTWVNO4vl1o\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET ALL KENDARAAN",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3Rlc3QvaW5vc29mdC9hcGkvbG9naW4iLCJpYXQiOjE2NzcyMDY4NDMsImV4cCI6MTY3NzIxMDQ0MywibmJmIjoxNjc3MjA2ODQzLCJqdGkiOiJnczFGbmhwT2dlRVRPSllEIiwic3ViIjoiNjNmODIwY2IzMDYyMTJiN2VhMGZmOGYyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4TYwmKZGIKbgtKZDBzuhqoIjfO4zQ7ARuTWVNO4vl1o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{host}/api/kendaraan",
+					"host": [
+						"{host}"
+					],
+					"path": [
+						"api",
+						"kendaraan"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET ALL KENDARAAN",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{host}/api/kendaraan",
+							"host": [
+								"{host}"
+							],
+							"path": [
+								"api",
+								"kendaraan"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 02:48:33 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.3"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"_id\": \"63f820cb306212b7ea0ff8f3\",\n            \"tahun_keluaran\": \"2000\",\n            \"warna\": \"merah\",\n            \"harga\": \"2000\",\n            \"stok\": \"50\",\n            \"jenis\": \"mobil\",\n            \"mesin\": \"aman\",\n            \"kapasitas_penumpang\": \"4\",\n            \"tipe\": \"terbaru\",\n            \"tipe_suspensi\": null,\n            \"tipe_transmisi\": null\n        },\n        {\n            \"_id\": \"63f820cb306212b7ea0ff8f4\",\n            \"tahun_keluaran\": \"2001\",\n            \"warna\": \"biru\",\n            \"harga\": \"5000\",\n            \"stok\": \"50\",\n            \"jenis\": \"motor\",\n            \"mesin\": \"aman\",\n            \"kapasitas_penumpang\": null,\n            \"tipe\": null,\n            \"tipe_suspensi\": \"suspensi\",\n            \"tipe_transmisi\": \"manual\"\n        },\n        {\n            \"_id\": \"63f820d3c3a841f35403bce2\",\n            \"tahun_keluaran\": \"2010\",\n            \"warna\": \"merah\",\n            \"harga\": \"7000\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\",\n            \"mesin\": \"aman\",\n            \"tipe_suspensi\": null,\n            \"tipe_transmisi\": null,\n            \"kapasitas_penumpang\": \"4\",\n            \"tipe\": \"manual\"\n        },\n        {\n            \"_id\": \"63f821069f9280f9f205a442\",\n            \"tahun_keluaran\": \"2010\",\n            \"warna\": \"merah\",\n            \"harga\": \"7000\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\",\n            \"mesin\": \"aman\",\n            \"tipe_suspensi\": null,\n            \"tipe_transmisi\": null,\n            \"kapasitas_penumpang\": \"4\",\n            \"tipe\": \"manual\"\n        },\n        {\n            \"_id\": \"63f8214ee37b821e1d0665b2\",\n            \"tahun_keluaran\": \"2010\",\n            \"warna\": \"merah\",\n            \"harga\": \"7000\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\",\n            \"mesin\": \"aman\",\n            \"tipe_suspensi\": null,\n            \"tipe_transmisi\": null,\n            \"kapasitas_penumpang\": \"4\",\n            \"tipe\": \"manual\"\n        },\n        {\n            \"_id\": \"63f821779c08662a020559e2\",\n            \"tahun_keluaran\": \"2010\",\n            \"warna\": \"merah\",\n            \"harga\": \"7000\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\",\n            \"mesin\": \"aman\",\n            \"tipe_suspensi\": null,\n            \"tipe_transmisi\": null,\n            \"kapasitas_penumpang\": \"4\",\n            \"tipe\": \"manual\"\n        },\n        {\n            \"_id\": \"63f821bcc490bfbb7f0e2942\",\n            \"tahun_keluaran\": \"2010\",\n            \"warna\": \"merah\",\n            \"harga\": \"7000\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\",\n            \"mesin\": \"aman\",\n            \"tipe_suspensi\": null,\n            \"tipe_transmisi\": null,\n            \"kapasitas_penumpang\": \"4\",\n            \"tipe\": \"manual\"\n        },\n        {\n            \"_id\": \"63f821eeb4f354de3709f3b2\",\n            \"tahun_keluaran\": \"2010\",\n            \"warna\": \"merah\",\n            \"harga\": \"7000\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\",\n            \"mesin\": \"aman\",\n            \"tipe_suspensi\": null,\n            \"tipe_transmisi\": null,\n            \"kapasitas_penumpang\": \"4\",\n            \"tipe\": \"manual\"\n        },\n        {\n            \"_id\": \"63f82224d2177b3fd60f3762\",\n            \"tahun_keluaran\": \"2010\",\n            \"warna\": \"merah\",\n            \"harga\": \"7000\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\",\n            \"mesin\": \"aman\",\n            \"tipe_suspensi\": null,\n            \"tipe_transmisi\": null,\n            \"kapasitas_penumpang\": \"4\",\n            \"tipe\": \"manual\"\n        },\n        {\n            \"_id\": \"63f822445dda11b3d70ae422\",\n            \"tahun_keluaran\": \"2010\",\n            \"warna\": \"merah\",\n            \"harga\": \"7000\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\",\n            \"mesin\": \"aman\",\n            \"tipe_suspensi\": null,\n            \"tipe_transmisi\": null,\n            \"kapasitas_penumpang\": \"4\",\n            \"tipe\": \"manual\"\n        },\n        {\n            \"_id\": \"63f822588e115e52930bf272\",\n            \"tahun_keluaran\": \"2010\",\n            \"warna\": \"merah\",\n            \"harga\": \"7000\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\",\n            \"mesin\": \"aman\",\n            \"tipe_suspensi\": null,\n            \"tipe_transmisi\": null,\n            \"kapasitas_penumpang\": \"4\",\n            \"tipe\": \"manual\"\n        },\n        {\n            \"_id\": \"63f822d3f3967c1a0f020a72\",\n            \"tahun_keluaran\": \"2010\",\n            \"warna\": \"merah\",\n            \"harga\": \"7000\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\",\n            \"mesin\": \"aman\",\n            \"tipe_suspensi\": null,\n            \"tipe_transmisi\": null,\n            \"kapasitas_penumpang\": \"4\",\n            \"tipe\": \"manual\"\n        },\n        {\n            \"_id\": \"63f8231a007ab933450e6442\",\n            \"tahun_keluaran\": \"2010\",\n            \"warna\": \"merah\",\n            \"harga\": \"7000\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\",\n            \"mesin\": \"aman\",\n            \"tipe_suspensi\": null,\n            \"tipe_transmisi\": null,\n            \"kapasitas_penumpang\": \"4\",\n            \"tipe\": \"manual\"\n        },\n        {\n            \"_id\": \"63f8233652bf43974f08c792\",\n            \"tahun_keluaran\": \"2010\",\n            \"warna\": \"merah\",\n            \"harga\": \"7000\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\",\n            \"mesin\": \"aman\",\n            \"tipe_suspensi\": null,\n            \"tipe_transmisi\": null,\n            \"kapasitas_penumpang\": \"4\",\n            \"tipe\": \"manual\"\n        },\n        {\n            \"_id\": \"63f823eaa8e77064bf0b0392\",\n            \"tahun_keluaran\": \"2010\",\n            \"warna\": \"merah\",\n            \"harga\": \"7000\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\",\n            \"mesin\": \"aman\",\n            \"tipe_suspensi\": null,\n            \"tipe_transmisi\": null,\n            \"kapasitas_penumpang\": \"4\",\n            \"tipe\": \"manual\"\n        },\n        {\n            \"_id\": \"63f824afc58b2b00190f02e2\",\n            \"tahun_keluaran\": \"2010\",\n            \"warna\": \"merah\",\n            \"harga\": \"7000\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\",\n            \"mesin\": \"aman\",\n            \"tipe_suspensi\": null,\n            \"tipe_transmisi\": null,\n            \"kapasitas_penumpang\": \"4\",\n            \"tipe\": \"manual\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET KENDARAAN BY ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3Rlc3QvaW5vc29mdC9hcGkvbG9naW4iLCJpYXQiOjE2NzcyMDY4NDMsImV4cCI6MTY3NzIxMDQ0MywibmJmIjoxNjc3MjA2ODQzLCJqdGkiOiJnczFGbmhwT2dlRVRPSllEIiwic3ViIjoiNjNmODIwY2IzMDYyMTJiN2VhMGZmOGYyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4TYwmKZGIKbgtKZDBzuhqoIjfO4zQ7ARuTWVNO4vl1o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{host}/api/kendaraan/63f820cb306212b7ea0ff8f3",
+					"host": [
+						"{host}"
+					],
+					"path": [
+						"api",
+						"kendaraan",
+						"63f820cb306212b7ea0ff8f3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET KENDARAAN BY ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{host}/api/kendaraan/63f820cb306212b7ea0ff8f3",
+							"host": [
+								"{host}"
+							],
+							"path": [
+								"api",
+								"kendaraan",
+								"63f820cb306212b7ea0ff8f3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 02:49:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.3"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"_id\": \"63f820cb306212b7ea0ff8f3\",\n        \"tahun_keluaran\": \"2000\",\n        \"warna\": \"merah\",\n        \"harga\": \"2000\",\n        \"stok\": \"50\",\n        \"jenis\": \"mobil\",\n        \"mesin\": \"aman\",\n        \"kapasitas_penumpang\": \"4\",\n        \"tipe\": \"terbaru\",\n        \"tipe_suspensi\": null,\n        \"tipe_transmisi\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "CREATE KENDARAAN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3Rlc3QvaW5vc29mdC9hcGkvbG9naW4iLCJpYXQiOjE2NzcyMDY4NDMsImV4cCI6MTY3NzIxMDQ0MywibmJmIjoxNjc3MjA2ODQzLCJqdGkiOiJnczFGbmhwT2dlRVRPSllEIiwic3ViIjoiNjNmODIwY2IzMDYyMTJiN2VhMGZmOGYyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4TYwmKZGIKbgtKZDBzuhqoIjfO4zQ7ARuTWVNO4vl1o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tahun_keluaran",
+							"value": "2022",
+							"type": "text"
+						},
+						{
+							"key": "warna",
+							"value": "merah muda",
+							"type": "text"
+						},
+						{
+							"key": "harga",
+							"value": "40000",
+							"type": "text"
+						},
+						{
+							"key": "stok",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "jenis",
+							"value": "mobil",
+							"type": "text"
+						},
+						{
+							"key": "mesin",
+							"value": "aman",
+							"type": "text"
+						},
+						{
+							"key": "kapasitas_penumpang",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "tipe",
+							"value": "manual",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{host}/api/kendaraan",
+					"host": [
+						"{host}"
+					],
+					"path": [
+						"api",
+						"kendaraan"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CREATE KENDARAAN",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tahun_keluaran",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "warna",
+									"value": "merah muda",
+									"type": "text"
+								},
+								{
+									"key": "harga",
+									"value": "40000",
+									"type": "text"
+								},
+								{
+									"key": "stok",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "jenis",
+									"value": "mobil",
+									"type": "text"
+								},
+								{
+									"key": "mesin",
+									"value": "aman",
+									"type": "text"
+								},
+								{
+									"key": "kapasitas_penumpang",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "tipe",
+									"value": "manual",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{host}/api/kendaraan",
+							"host": [
+								"{host}"
+							],
+							"path": [
+								"api",
+								"kendaraan"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 02:52:35 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.3"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"tahun_keluaran\": \"2022\",\n        \"warna\": \"merah muda\",\n        \"harga\": \"40000\",\n        \"stok\": \"20\",\n        \"jenis\": \"mobil\",\n        \"mesin\": \"aman\",\n        \"tipe_suspensi\": null,\n        \"tipe_transmisi\": null,\n        \"kapasitas_penumpang\": \"4\",\n        \"tipe\": \"manual\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "UPDATE KENDARAAN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3Rlc3QvaW5vc29mdC9hcGkvbG9naW4iLCJpYXQiOjE2NzcyMDY4NDMsImV4cCI6MTY3NzIxMDQ0MywibmJmIjoxNjc3MjA2ODQzLCJqdGkiOiJnczFGbmhwT2dlRVRPSllEIiwic3ViIjoiNjNmODIwY2IzMDYyMTJiN2VhMGZmOGYyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4TYwmKZGIKbgtKZDBzuhqoIjfO4zQ7ARuTWVNO4vl1o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tahun_keluaran",
+							"value": "2022",
+							"type": "text"
+						},
+						{
+							"key": "warna",
+							"value": "kuning",
+							"type": "text"
+						},
+						{
+							"key": "harga",
+							"value": "70000",
+							"type": "text"
+						},
+						{
+							"key": "stok",
+							"value": "70",
+							"type": "text"
+						},
+						{
+							"key": "jenis",
+							"value": "mobil",
+							"type": "text"
+						},
+						{
+							"key": "mesin",
+							"value": "aman",
+							"type": "text"
+						},
+						{
+							"key": "kapasitas_penumpang",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "tipe",
+							"value": "manual",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{host}/api/kendaraan/63f826737fdd45fad5040d94",
+					"host": [
+						"{host}"
+					],
+					"path": [
+						"api",
+						"kendaraan",
+						"63f826737fdd45fad5040d94"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "UPDATE KENDARAAN",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tahun_keluaran",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "warna",
+									"value": "kuning",
+									"type": "text"
+								},
+								{
+									"key": "harga",
+									"value": "70000",
+									"type": "text"
+								},
+								{
+									"key": "stok",
+									"value": "70",
+									"type": "text"
+								},
+								{
+									"key": "jenis",
+									"value": "mobil",
+									"type": "text"
+								},
+								{
+									"key": "mesin",
+									"value": "aman",
+									"type": "text"
+								},
+								{
+									"key": "kapasitas_penumpang",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "tipe",
+									"value": "manual",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{host}/api/kendaraan/63f826737fdd45fad5040d94",
+							"host": [
+								"{host}"
+							],
+							"path": [
+								"api",
+								"kendaraan",
+								"63f826737fdd45fad5040d94"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 02:58:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.3"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"tahun_keluaran\": \"2022\",\n        \"warna\": \"kuning\",\n        \"harga\": \"70000\",\n        \"stok\": \"70\",\n        \"jenis\": \"mobil\",\n        \"mesin\": \"aman\",\n        \"tipe_suspensi\": null,\n        \"tipe_transmisi\": null,\n        \"kapasitas_penumpang\": \"5\",\n        \"tipe\": \"manual\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "DELETE KENDARAAN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3Rlc3QvaW5vc29mdC9hcGkvbG9naW4iLCJpYXQiOjE2NzcyMDY4NDMsImV4cCI6MTY3NzIxMDQ0MywibmJmIjoxNjc3MjA2ODQzLCJqdGkiOiJnczFGbmhwT2dlRVRPSllEIiwic3ViIjoiNjNmODIwY2IzMDYyMTJiN2VhMGZmOGYyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4TYwmKZGIKbgtKZDBzuhqoIjfO4zQ7ARuTWVNO4vl1o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{host}/api/kendaraan/63f826737fdd45fad5040d94",
+					"host": [
+						"{host}"
+					],
+					"path": [
+						"api",
+						"kendaraan",
+						"63f826737fdd45fad5040d94"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "DELETE KENDARAAN",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{host}/api/kendaraan/63f826737fdd45fad5040d94",
+							"host": [
+								"{host}"
+							],
+							"path": [
+								"api",
+								"kendaraan",
+								"63f826737fdd45fad5040d94"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 02:59:57 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.3"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "STOK KENDARAAN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3Rlc3QvaW5vc29mdC9hcGkvbG9naW4iLCJpYXQiOjE2NzcyMDY4NDMsImV4cCI6MTY3NzIxMDQ0MywibmJmIjoxNjc3MjA2ODQzLCJqdGkiOiJnczFGbmhwT2dlRVRPSllEIiwic3ViIjoiNjNmODIwY2IzMDYyMTJiN2VhMGZmOGYyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4TYwmKZGIKbgtKZDBzuhqoIjfO4zQ7ARuTWVNO4vl1o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{host}/api/kendaraan/stok",
+					"host": [
+						"{host}"
+					],
+					"path": [
+						"api",
+						"kendaraan",
+						"stok"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "STOK KENDARAAN",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{host}/api/kendaraan/stok",
+							"host": [
+								"{host}"
+							],
+							"path": [
+								"api",
+								"kendaraan",
+								"stok"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 03:01:11 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.3"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"_id\": \"63f820cb306212b7ea0ff8f3\",\n            \"stok\": \"50\",\n            \"jenis\": \"mobil\"\n        },\n        {\n            \"_id\": \"63f820cb306212b7ea0ff8f4\",\n            \"stok\": \"50\",\n            \"jenis\": \"motor\"\n        },\n        {\n            \"_id\": \"63f820d3c3a841f35403bce2\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\"\n        },\n        {\n            \"_id\": \"63f821069f9280f9f205a442\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\"\n        },\n        {\n            \"_id\": \"63f8214ee37b821e1d0665b2\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\"\n        },\n        {\n            \"_id\": \"63f821779c08662a020559e2\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\"\n        },\n        {\n            \"_id\": \"63f821bcc490bfbb7f0e2942\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\"\n        },\n        {\n            \"_id\": \"63f821eeb4f354de3709f3b2\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\"\n        },\n        {\n            \"_id\": \"63f82224d2177b3fd60f3762\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\"\n        },\n        {\n            \"_id\": \"63f822445dda11b3d70ae422\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\"\n        },\n        {\n            \"_id\": \"63f822588e115e52930bf272\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\"\n        },\n        {\n            \"_id\": \"63f822d3f3967c1a0f020a72\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\"\n        },\n        {\n            \"_id\": \"63f8231a007ab933450e6442\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\"\n        },\n        {\n            \"_id\": \"63f8233652bf43974f08c792\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\"\n        },\n        {\n            \"_id\": \"63f823eaa8e77064bf0b0392\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\"\n        },\n        {\n            \"_id\": \"63f824afc58b2b00190f02e2\",\n            \"stok\": \"20\",\n            \"jenis\": \"mobil\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET ALL PENJUALAN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3Rlc3QvaW5vc29mdC9hcGkvbG9naW4iLCJpYXQiOjE2NzcyMDY4NDMsImV4cCI6MTY3NzIxMDQ0MywibmJmIjoxNjc3MjA2ODQzLCJqdGkiOiJnczFGbmhwT2dlRVRPSllEIiwic3ViIjoiNjNmODIwY2IzMDYyMTJiN2VhMGZmOGYyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4TYwmKZGIKbgtKZDBzuhqoIjfO4zQ7ARuTWVNO4vl1o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{host}/api/penjualan/",
+					"host": [
+						"{host}"
+					],
+					"path": [
+						"api",
+						"penjualan",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET ALL PENJUALAN",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{host}/api/penjualan",
+							"host": [
+								"{host}"
+							],
+							"path": [
+								"api",
+								"penjualan"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 03:02:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.3"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"_id\": \"63f824afc58b2b00190f02e3\",\n            \"kendaraan_id\": \"5\",\n            \"jumlah\": \"20\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET PENJUALAN BY ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3Rlc3QvaW5vc29mdC9hcGkvbG9naW4iLCJpYXQiOjE2NzcyMDY4NDMsImV4cCI6MTY3NzIxMDQ0MywibmJmIjoxNjc3MjA2ODQzLCJqdGkiOiJnczFGbmhwT2dlRVRPSllEIiwic3ViIjoiNjNmODIwY2IzMDYyMTJiN2VhMGZmOGYyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4TYwmKZGIKbgtKZDBzuhqoIjfO4zQ7ARuTWVNO4vl1o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{host}/api/penjualan/63f824afc58b2b00190f02e3",
+					"host": [
+						"{host}"
+					],
+					"path": [
+						"api",
+						"penjualan",
+						"63f824afc58b2b00190f02e3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET PENJUALAN BY ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{host}/api/penjualan/63f824afc58b2b00190f02e3",
+							"host": [
+								"{host}"
+							],
+							"path": [
+								"api",
+								"penjualan",
+								"63f824afc58b2b00190f02e3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 03:03:16 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.3"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"_id\": \"63f824afc58b2b00190f02e3\",\n        \"kendaraan_id\": \"5\",\n        \"jumlah\": \"20\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "CREATE PENJUALAN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3Rlc3QvaW5vc29mdC9hcGkvbG9naW4iLCJpYXQiOjE2NzcyMDY4NDMsImV4cCI6MTY3NzIxMDQ0MywibmJmIjoxNjc3MjA2ODQzLCJqdGkiOiJnczFGbmhwT2dlRVRPSllEIiwic3ViIjoiNjNmODIwY2IzMDYyMTJiN2VhMGZmOGYyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4TYwmKZGIKbgtKZDBzuhqoIjfO4zQ7ARuTWVNO4vl1o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "kendaraan_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "jumlah",
+							"value": "20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{host}/api/penjualan",
+					"host": [
+						"{host}"
+					],
+					"path": [
+						"api",
+						"penjualan"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CREATE PENJUALAN",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "kendaraan_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "jumlah",
+									"value": "20",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{host}/api/penjualan",
+							"host": [
+								"{host}"
+							],
+							"path": [
+								"api",
+								"penjualan"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 03:05:07 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.3"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"kendaraan_id\": \"1\",\n        \"jumlah\": \"20\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "UPDATE PENJUALAN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3Rlc3QvaW5vc29mdC9hcGkvbG9naW4iLCJpYXQiOjE2NzcyMDY4NDMsImV4cCI6MTY3NzIxMDQ0MywibmJmIjoxNjc3MjA2ODQzLCJqdGkiOiJnczFGbmhwT2dlRVRPSllEIiwic3ViIjoiNjNmODIwY2IzMDYyMTJiN2VhMGZmOGYyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4TYwmKZGIKbgtKZDBzuhqoIjfO4zQ7ARuTWVNO4vl1o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "kendaraan_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "jumlah",
+							"value": "120",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{host}/api/penjualan/63f824afc58b2b00190f02e3",
+					"host": [
+						"{host}"
+					],
+					"path": [
+						"api",
+						"penjualan",
+						"63f824afc58b2b00190f02e3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "UPDATE PENJUALAN",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "kendaraan_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "jumlah",
+									"value": "120",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{host}/api/penjualan/63f824afc58b2b00190f02e3",
+							"host": [
+								"{host}"
+							],
+							"path": [
+								"api",
+								"penjualan",
+								"63f824afc58b2b00190f02e3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 03:06:25 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.3"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"kendaraan_id\": \"5\",\n        \"jumlah\": \"120\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "LAPORAN PENJUALAN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3Rlc3QvaW5vc29mdC9hcGkvbG9naW4iLCJpYXQiOjE2NzcyMDY4NDMsImV4cCI6MTY3NzIxMDQ0MywibmJmIjoxNjc3MjA2ODQzLCJqdGkiOiJnczFGbmhwT2dlRVRPSllEIiwic3ViIjoiNjNmODIwY2IzMDYyMTJiN2VhMGZmOGYyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4TYwmKZGIKbgtKZDBzuhqoIjfO4zQ7ARuTWVNO4vl1o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{host}/api/penjualan/laporan",
+					"host": [
+						"{host}"
+					],
+					"path": [
+						"api",
+						"penjualan",
+						"laporan"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "LAPORAN PENJUALAN",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{host}/api/penjualan/laporan",
+							"host": [
+								"{host}"
+							],
+							"path": [
+								"api",
+								"penjualan",
+								"laporan"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 03:07:28 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.3"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"1\": {\n            \"kendaraan_id\": \"1\",\n            \"jumlah\": 20,\n            \"data\": [\n                {\n                    \"_id\": \"63f829637fdd45fad5040d95\",\n                    \"kendaraan_id\": \"1\",\n                    \"jumlah\": \"20\"\n                }\n            ]\n        },\n        \"5\": {\n            \"kendaraan_id\": \"5\",\n            \"jumlah\": 120,\n            \"data\": [\n                {\n                    \"_id\": \"63f824afc58b2b00190f02e3\",\n                    \"kendaraan_id\": \"5\",\n                    \"jumlah\": \"120\",\n                    \"updated_at\": \"2023-02-24T03:06:25.987000Z\"\n                }\n            ]\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "DELETE PENJUALAN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3Rlc3QvaW5vc29mdC9hcGkvbG9naW4iLCJpYXQiOjE2NzcyMDY4NDMsImV4cCI6MTY3NzIxMDQ0MywibmJmIjoxNjc3MjA2ODQzLCJqdGkiOiJnczFGbmhwT2dlRVRPSllEIiwic3ViIjoiNjNmODIwY2IzMDYyMTJiN2VhMGZmOGYyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4TYwmKZGIKbgtKZDBzuhqoIjfO4zQ7ARuTWVNO4vl1o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{host}/api/penjualan/63f829637fdd45fad5040d95",
+					"host": [
+						"{host}"
+					],
+					"path": [
+						"api",
+						"penjualan",
+						"63f829637fdd45fad5040d95"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "DELETE PENJUALAN",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{host}/api/penjualan/63f829637fdd45fad5040d95",
+							"host": [
+								"{host}"
+							],
+							"path": [
+								"api",
+								"penjualan",
+								"63f829637fdd45fad5040d95"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 03:08:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.3"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": true\n}"
+				}
+			]
+		}
+	]
+}
